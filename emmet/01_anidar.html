@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Anidar elementos</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+    <h2>Anidar elementos (>)</h2>
+    <section>
+        <div class="ejemplo">
+            ul>li>a>img
+        </div>
+        <div class="resultado">
+            <xmp>
+                <ul>
+                    <li>
+                        <a href="">
+                            <img src="" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </xmp>
+        </div>
+    </section>
+
+    <h2>Elementos hermanos (+)</h2>
+    <section>
+        <div class="ejemplo">
+            section+header+nav
+        </div>
+        <div class="resultado">
+            <xmp>
+                <section></section>
+                <header></header>
+                <nav></nav>
+            </xmp>
+        </div>
+    </section>
+
+    <h2>Repetir elementos (*)</h2>
+    <section>
+        <div class="ejemplo">
+            ul>li*5>span*2
+        </div>
+        <div class="resultado">
+            <xmp>
+                <ul>
+                    <li>
+                        <span></span>
+                        <span></span>
+                    </li>
+                    <li>
+                        <span></span>
+                        <span></span>
+                    </li>
+                    <li>
+                        <span></span>
+                        <span></span>
+                    </li>
+                    <li>
+                        <span></span>
+                        <span></span>
+                    </li>
+                    <li>
+                        <span></span>
+                        <span></span>
+                    </li>
+                </ul>
+            </xmp>
+        </div>
+    </section>
+
+    <h2>Subir nivel (^)</h2>
+    <section>
+        <div class="ejemplo">
+            ul>li>p^span
+        </div>
+        <div class="resultado">
+            <xmp>
+                <ul>
+                    <li>
+                        <p></p>
+                    </li>
+                    <span></span>
+                </ul>
+            </xmp>
+        </div>
+    </section>
+
+    <h2> Atributo Clase</h2>
+    <section>
+        <div class="ejemplo">
+            .class1
+        </div>
+        <div class="resultado">
+            <xmp>
+                <div class="class1"></div>
+            </xmp>
+        </div>
+    </section>
+
+    <h2> Multiples Clases</h2>
+    <section>
+        <div class="ejemplo">
+            .class1.class2.class3
+        </div>
+        <div class="resultado">
+            <xmp>
+                <div class="class1 class2 class3"></div>
+            </xmp>
+        </div>
+    </section>
+
+    <h2> Atributo Identificador</h2>
+    <section>
+        <div class="ejemplo">
+            #header
+        </div>
+        <div class="resultado">
+            <xmp>
+                <div id="header"></div>
+            </xmp>
+        </div>
+    </section>
+
+    <h2> Adicionar Texto</h2>
+    <section>
+        <div class="ejemplo">
+            p>{Click }+a{aquí}+{ para continuar}
+        </div>
+        <div class="resultado">
+            <xmp>
+                <p>
+                    Click
+                    <a href="">aquó</a>
+                    paracontinuar
+                </p>
+            </xmp>
+        </div>
+    </section>
+
+    <h2> Atributos personalizados</h2>
+    <section>
+        <div class="ejemplo">
+            p[title="Mi parrafo"]
+        </div>
+        <div class="resultado">
+            <xmp>
+                <p title="Mi parrafo"></p>
+            </xmp>
+        </div>
+    </section>
+
+    <h2> Números Consecutivos</h2>
+    <section>
+        <div class="ejemplo">
+            ul>li.ejemplo$*5
+        </div>
+        <div class="resultado">
+            <xmp>
+                <ul>
+                    <li class="ejemplo1"></li>
+                    <li class="ejemplo2"></li>
+                    <li class="ejemplo3"></li>
+                    <li class="ejemplo4"></li>
+                    <li class="ejemplo5"></li>
+                </ul>
+            </xmp>
+        </div>
+    </section>
+
+    <h2> Dirección Números Consecutivos</h2>
+    <section>
+        <div class="ejemplo">
+            ul>li.ejemplo$@-*5
+        </div>
+        <div class="resultado">
+            <xmp>
+                <ul>
+                    <li class="ejemplo5"></li>
+                    <li class="ejemplo4"></li>
+                    <li class="ejemplo3"></li>
+                    <li class="ejemplo2"></li>
+                    <li class="ejemplo1"></li>
+                </ul>
+            </xmp>
+        </div>
+    </section>
+
+    <h2> Base Números Consecutivos</h2>
+    <section>
+        <div class="ejemplo">
+            ul>li.ejemplo$@3*5
+        </div>
+        <div class="resultado">
+            <xmp>
+                <ul>
+                    <li class="ejemplo3"></li>
+                    <li class="ejemplo4"></li>
+                    <li class="ejemplo5"></li>
+                    <li class="ejemplo6"></li>
+                    <li class="ejemplo7"></li>
+                </ul>
+            </xmp>
+        </div>
+    </section>
+
+    <h2> Agrupar Elementos</h2>
+    <section>
+        <div class="ejemplo">
+            div>(header>ul>li*2>a)+footer>p
+        </div>
+        <div class="resultado">
+            <xmp>
+                <div>
+                    <header>
+                        <ul>
+                            <li>
+                                <a href=""></a>
+                            </li>
+                            <li>
+                                <a href=""></a>
+                            </li>
+                        </ul>
+                    </header>
+                    <footer>
+                        <p></p>
+                    </footer>
+                </div>
+            </xmp>
+        </div>
+    </section>
+
+    <h2> Generador “Lorem Ipsum”</h2>
+    <section>
+        <div class="ejemplo">
+            lorem
+        </div>
+        <div class="resultado">
+            <xmp>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur fugiat ea dolores magnam cupiditate, beatae, aliquam omnis praesentium quidem similique nemo est fuga fugit vero, soluta alias quam consectetur, enim.
+            </xmp>
+        </div>
+    </section>
+
+    <h2>  Documentos HTML</h2>
+    <section>
+        <div class="ejemplo">
+            html:xml
+        </div>
+        <div class="resultado">
+            <xmp>
+                <html xmlns="http://www.w3.org/1999/xhtml"></html>
+            </xmp>
+        </div>
+    </section>    
+</body>
+<script>
+    $(document).ready(function () {
+        $('.resultado').hide();
+        $('section').on('click', '.ejemplo', function (event) {
+            event.preventDefault();
+            $(this).next('.resultado').slideToggle('slow');
+        });
+    });
+</script>
+
+</html>
